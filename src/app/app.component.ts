@@ -9,7 +9,7 @@ import { CartService  } from './cart.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BOOK MANAGEMENT';
+  title = 'BOOK MANAGEMENT!';
   book2: Array<book>;
   book3: Array<book>;
 
@@ -20,7 +20,7 @@ ngOnInit () {
   this.book3 = this.cartvar.getBook3();
  
   this.cartvar.booksview().subscribe(function(newval){this.book2= newval } );
-  this.cartvar.cartview().subscribe(function(newval){ this.book3= newval} );
+  this.cartvar.cartview().subscribe(function(newval){ this.book3= newval } );
 }
 
 }

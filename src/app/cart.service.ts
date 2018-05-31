@@ -13,18 +13,30 @@ export class CartService {
     console.log(tocart);
     this.book3.push(tocart);
     var i = this.book2.indexOf(tocart);
+    
     if(i != -1) {
-    this.book2.splice(i, 1);
-}
+      this.book2.splice(i, 1);
+      console.log(typeof i);
+      console.log("helloo")
+    } else {
+      return false;
+    }
+
+    return true;
 }
   delete( fromcart: book)
   {
     console.log(fromcart);
     this.book2.push(fromcart);
     var i = this.book3.indexOf(fromcart);
+
     if(i != -1) {
     this.book3.splice(i, 1); 
+    console.log("helloo")
+  } else{
+    return false;
   }
+  return true;
 }
   booksview(): Observable<Array<book>>
   {
@@ -45,3 +57,4 @@ export class CartService {
 
   constructor() { }
 }
+
